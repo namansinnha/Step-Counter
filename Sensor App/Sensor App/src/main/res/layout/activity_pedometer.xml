@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".PedometerActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_footsteps"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/tv_steps"/>
+
+    <TextView
+        android:id="@+id/tv_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="0"
+        android:layout_margin="32dp"
+        android:fontFamily="monospace"/>
+
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Start Pedometer"
+        android:padding="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/primary_btn"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Pedometer"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/btn_start"
+        android:stateListAnimator="@null"
+        android:textColor="#38496d"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>
